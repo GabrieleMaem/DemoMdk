@@ -1,0 +1,50 @@
+{
+    "Service": "/DemoAppMDK/Services/com_sap_edm_sampleservice_v2.service",
+    "DefiningRequests": [{
+            "Name": "Customers",
+            "Query": "Customers"
+        },
+        {
+            "Name": "ProductCategories",
+            "Query": "ProductCategories"
+        },
+        {
+            "Name": "Products",
+            "Query": "Products"
+        },
+        {
+            "Name": "ProductTexts",
+            "Query": "ProductTexts"
+        },
+        {
+            "Name": "PurchaseOrderHeaders",
+            "Query": "PurchaseOrderHeaders"
+        },
+        {
+            "Name": "PurchaseOrderItems",
+            "Query": "PurchaseOrderItems"
+        },
+        {
+            "Name": "SalesOrderHeaders",
+            "Query": "SalesOrderHeaders"
+        },
+        {
+            "Name": "SalesOrderItems",
+            "Query": "SalesOrderItems"
+        },
+        {
+            "Name": "Stock",
+            "Query": "Stock"
+        },
+        {
+            "Name": "Suppliers",
+            "Query": "Suppliers"
+        }
+    ],
+    "_Type": "Action.Type.OfflineOData.Download",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnFailure": "/DemoAppMDK/Actions/Service/SyncFailureMessage.action",
+    "OnSuccess": "/DemoAppMDK/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js"
+}

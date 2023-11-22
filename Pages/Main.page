@@ -1,0 +1,83 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Buttons": [
+						{
+							"_Name": "SectionButton0",
+							"Title": "Aggiungi Spesa",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://add",
+							"ImagePosition": "Leading",
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/DemoAppMDK/Actions/NavToadd_spesa.action"
+						}
+					],
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					}
+				}
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Main",
+	"Caption": "Main",
+	"PrefersLargeCaption": true,
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "LogoutToolbarItem",
+				"Caption": "Logout",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"OnPress": "/DemoAppMDK/Actions/LogoutMessage.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "UploadToolbarItem",
+				"Caption": "Sync",
+				"Enabled": true,
+				"Visible": "$(PLT,true,true,false)",
+				"Clickable": true,
+				"OnPress": "/DemoAppMDK/Actions/Service/SyncStartedMessage.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "UpdateToolbarItem",
+				"Caption": "Update",
+				"Enabled": true,
+				"Visible": "$(PLT,true,true,false)",
+				"Clickable": true,
+				"OnPress": "/DemoAppMDK/Actions/AppUpdateProgressBanner.action"
+			}
+		]
+	}
+}

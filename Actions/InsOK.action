@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.ToastMessage",
+	"ActionResult": {
+		"_Name": "InsOK"
+	},
+	"OnSuccess": "/DemoAppMDK/Actions/NavToMain.action",
+	"Message": "Spesa inserita correttamente",
+	"NumberOfLines": 1
+}

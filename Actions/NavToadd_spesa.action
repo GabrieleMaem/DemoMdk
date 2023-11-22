@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavToadd_spesa"
+	},
+	"PageToOpen": "/DemoAppMDK/Pages/add_spesa.page"
+}

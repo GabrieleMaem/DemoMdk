@@ -1,0 +1,160 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "Inserisci la data",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "FormCellDatePicker0",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Data",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker0",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Scegli Causale",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								"A/R Aeroporto",
+								"Ristorante",
+								"Hotel"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty0",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Importo",
+							"PlaceHolder": "0",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "valutaProp",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Valuta",
+							"PlaceHolder": "Euro",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "altraValutaPicker",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Altra Valuta",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"OnValueChange": "/DemoAppMDK/Rules/onValutaChange.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								"Euro",
+								"Dollaro",
+								"Sterlina"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Cambio",
+							"PlaceHolder": "0",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Importo in Euro",
+							"PlaceHolder": "0",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.Attachment",
+							"_Name": "FormCellAttachment0",
+							"IsVisible": true,
+							"Separator": true,
+							"AttachmentActionType": [
+								"AddPhoto",
+								"TakePhoto",
+								"SelectFile"
+							],
+							"AttachmentTitle": "Foto Ricevuta"
+						}
+					],
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "add_spesa",
+	"Caption": "Aggiungi Spesa",
+	"PrefersLargeCaption": true,
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "ToolbarItem0",
+				"Caption": "Inserisci spesa",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"Style": "",
+				"OnPress": "/DemoAppMDK/Actions/InsOK.action"
+			}
+		]
+	}
+}
